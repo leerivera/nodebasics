@@ -1,18 +1,23 @@
-const os = require("os")
+const path = require('path')
+
+console.log(path.sep)
 
 
-const user = os.userInfo()
-console.log(user)
+// const os = require("os")
 
-// method returns system uptime
 
-console.log(`system uptime ${os.uptime()}`)
+// const user = os.userInfo()
+// console.log(user)
 
-const currentOS = {
-    name: os.type(),
-    release: os.release(),
-    totalMem: os.totalmem(),
-    freeMem: os.freemem()
-}
+// // method returns system uptime
 
-console.log(currentOS)
+// console.log(`system uptime ${os.uptime()}`)
+
+// const currentOS = {
+//     name: os.type(),
+//     release: os.release(),
+//     totalMem: os.totalmem(),
+//     freeMem: os.freemem()
+// }
+
+// console.log(currentOS)
