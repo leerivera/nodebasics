@@ -1,8 +1,15 @@
 const http = require('http')
 
 const server = http.createServer((req, res) => {
-    res.write('welcome to hell')
-    res.end()
+    if(req.url === '/'){
+        res.end('Welcome here is my page')
+    }
+    if(req.url === '/about'){
+        res.end("here is our story it's been a long time")
+    }
+    res.end(`<h1>you're off</h1>
+    <p>you sure you're in the right place</p>
+    <a href="/">go back</a>`)
 })
 
 server.listen(5000)
