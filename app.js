@@ -1,16 +1,25 @@
-const path = require('path')
+const http = require('http')
 
-console.log(path.sep)
+const server = http.createServer((req, res) => {
+    res.write('welcome to hell')
+    res.end()
+})
 
-const filePath = path.join('/content', 'subfolder', 'test.txt')
-console.log(filePath)
+server.listen(5000)
+ 
+// const path = require('path')
 
-const base = path.basename(filePath)
-console.log(base)
+// console.log(path.sep)
 
-// find the absolute path
-const absolute = path.resolve(__dirname, 'content', 'subfolder', 'test.text')
-console.log(absolute)
+// const filePath = path.join('/content', 'subfolder', 'test.txt')
+// console.log(filePath)
+
+// const base = path.basename(filePath)
+// console.log(base)
+
+// // find the absolute path
+// const absolute = path.resolve(__dirname, 'content', 'subfolder', 'test.text')
+// console.log(absolute)
 
 
 // const os = require("os")
